@@ -67,13 +67,7 @@ const Timeline = () => {
     <Section id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        Hey, my name is Kévin Toussaint, I am a 25 years old french web
-        developer. I have just completed a 10-week-long coding bootcamp which
-        goal was to build 10 applications, in 10 weeks, and which ended with an
-        MVP together with 2 fellow students, that we presented in front of a
-        board for our final examination. I have been practicing coding for 6
-        months, and, although I am still a junior, still a beginner, my
-        motivation is at a 100%!
+        Hola estimdos usuarios
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
