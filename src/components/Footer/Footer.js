@@ -36,7 +36,7 @@ const Footer = () => {
           <AiFillLinkedin size="3rem" />
         </SocialIcons>
         <SocialIcons href="https://twitter.com/Angel10_Ozil">
-          <AiFillGithub size="3rem" />
+          <AiFillTwitter size="3rem" />
         </SocialIcons>
       </SocialIconsContainer>
     </FooterWrapper>
