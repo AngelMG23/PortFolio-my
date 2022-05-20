@@ -1,52 +1,68 @@
-import React, { Component, useEffect, useRef } from "react";
-import { init } from "ityped";
+import Link from "next/link";
+import React from "react";
 import {
-  Section,
-  SectionText,
-  SectionTitle,
-  SectionText2,
-} from "../../styles/GlobalComponents";
-import Button from "../../styles/GlobalComponents/Button";
-import { LeftSection, Span, Span2 } from "./HeroStyles";
+  AiFillGithub,
+  AiFillTwitter,
+  AiFillLinkedin,
+  AiOutlineContacts,
+} from "react-icons/ai";
+import { DiMaterializecss } from "react-icons/di";
 
-function Hero() {
-  const textRef = useRef();
-  useEffect(() => {
-    init(textRef.current, {
-      showCursor: false,
-      typeSpeed: 120,
-      backSpeed: 30,
-      loop: true,
-      strings: ["Front-End", "Back-End", "FullStack"],
-    });
-  }, []);
-  return (
-    <Section row nopadding>
-      <LeftSection>
-        <SectionTitle main center>
-          Hi There, I'm
-          <br />
-          <Span>Ángel Martínez</Span> <br />
-          Mechatronics engineer
-          <Span2 style={{ marginLeft: "2rem" }} ref={textRef}></Span2>
-        </SectionTitle>
-        <SectionText2>
-          Are you looking for a recent graduated mechatronics engineer? Highly motivated and
-          responsible and with discipline? I'm here for you! You can download my CV/Resume by
-          clicking on the button below.
-          <br />
-        </SectionText2>
-        <Button
-          onClick={() =>
-            (window.location =
-              "https://drive.google.com/uc?export=download&id=17tKOhx1MYfXvIFGFKZvj5f8Gnuw1IuCi")
-          }
+import {
+  Container,
+  Div1,
+  Div2,
+  Div3,
+  NavLink,
+  SocialIcons,
+  Span,
+} from "./HeaderStyles";
+
+const Header = () => (
+  <Container>
+    <Div1>
+      <Link href="/">
+        <a
+          style={{
+            display: "flex",
+            alignItems: "center",
+            color: "white",
+            marginBottom: "16px",
+          }}
         >
-          <td>My CV</td>
-        </Button>
-      </LeftSection>
-    </Section>
-  );
-}
+          <DiMaterializecss size="3rem" /> <Span>Portfolio</Span>
+        </a>
+      </Link>
+    </Div1>
+    <Div2>
+      <li>
+        <Link href="/projects">
+          <NavLink>Projects</NavLink>
+        </Link>
+      </li>
+      <li>
+        <Link href="#tech">
+          <NavLink>Technologies</NavLink>
+        </Link>
+      </li>
+      <li>
+        <Link href="#about">
+          <NavLink>About</NavLink>
+        </Link>
+      </li>
+    </Div2>
+    <Div3>
+    <SocialIcons href="https://github.com/AngelMG23">
+          <AiFillGithub size="3rem" />
+        </SocialIcons>
+        <SocialIcons href="https://www.linkedin.com/in/langelmartinezg23/">
+          <AiFillLinkedin size="3rem" />
+        </SocialIcons>
+        <SocialIcons href="https://twitter.com/Angel10_Ozil">
+          <AiFillTwitter size="3rem" />
+        </SocialIcons>
+    </Div3>
+  </Container>
+);
 
-export default Hero;
+export default Header;
