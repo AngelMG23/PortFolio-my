@@ -26,13 +26,13 @@ function Hero() {
         <SectionTitle main center>
           Hi There, I'm
           <br />
-          <Span>Kevin Toussaint</Span> <br />
-          Web Developer
+          <Span>Ángel Martínez</Span> <br />
+          Mechatronics engineer
           <Span2 style={{ marginLeft: "2rem" }} ref={textRef}></Span2>
         </SectionTitle>
         <SectionText2>
-          Are you looking for a fresh junior web developer? Highly motivated and
-          fast learner? I'm here for you! You can download my CV/Resume by
+          Are you looking for a recent graduated mechatronics engineer? Highly motivated and
+          responsible and with discipline? I'm here for you! You can download my CV/Resume by
           clicking on the button below.
           <br />
         </SectionText2>
